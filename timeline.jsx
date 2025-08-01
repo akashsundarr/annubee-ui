@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Heart, Plus, Home, Edit3, Star, Sparkles, Coffee, Camera } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "./components/ui/button"
+import { Card, CardContent } from "./components/ui/card"
 
 const FloatingStickers = () => {
   const stickers = [
@@ -101,7 +101,7 @@ export default function LoveTimeline() {
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in opacity-0 animate-delay-300 animate-fill-forwards">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-stone-200 rounded-2xl mb-6 border border-stone-300 transform transition-transform hover:scale-105">
             <Heart className="w-8 h-8 text-stone-600 fill-current animate-pulse" />
           </div>
