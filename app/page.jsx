@@ -1,5 +1,11 @@
 import LoveTimeline from "../timeline"
+import BirthdaySection from "../birthday-section"
 
 export default function Page() {
-  return <LoveTimeline />
+  return (
+    <div>
+      <BirthdaySection />
+      <LoveTimeline />
+    </div>
+  )
 }
