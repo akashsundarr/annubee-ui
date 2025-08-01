@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Heart, Plus, Home, Edit3, Star, Sparkles, Coffee, Camera } from "lucide-react"
-import { Button } from "./components/ui/button"
-import { Card, CardContent } from "./components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const FloatingStickers = () => {
   const stickers = [
