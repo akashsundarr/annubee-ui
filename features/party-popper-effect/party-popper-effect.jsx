@@ -4,8 +4,22 @@ import { useEffect, useState } from "react"
 
 export default function PartyPopperEffect({ onComplete }) {
   const [isVisible, setIsVisible] = useState(true)
+  const [confettiParticles, setConfettiParticles] = useState([]) // State to store particles
 
   useEffect(() => {
+    // Generate particles only on client mount
+    const generatedParticles = Array.from({ length: 80 }).map((_, i) => ({
+      id: i,
+      color: `hsl(${Math.random() * 360}, 70%, 60%)`, // Random vibrant color
+      size: `${Math.random() * 8 + 4}px`, // Random size between 4px and 12px
+      delay: `${Math.random() * 0.5}s`, // Staggered delay
+      duration: `${2 + Math.random() * 1.5}s`, // Random duration
+      x: `${Math.random() * 100 - 50}vw`, // Random horizontal spread
+      y: `${Math.random() * 100 - 50}vh`, // Random vertical spread
+      rotation: `${Math.random() * 720}deg`, // Random initial rotation
+    }))
+    setConfettiParticles(generatedParticles)
+
     // Hide the effect after 3.5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false)
@@ -15,23 +29,12 @@ export default function PartyPopperEffect({ onComplete }) {
     }, 3500) // Auto-hide after 3.5 seconds
 
     return () => clearTimeout(timer)
-  }, [onComplete])
+  }, [onComplete]) // Dependency array includes onComplete
 
-  if (!isVisible) {
+  if (!isVisible || confettiParticles.length === 0) {
+    // Only render if visible and particles are generated
     return null
   }
-
-  // Generate random confetti particles
-  const confettiParticles = Array.from({ length: 80 }).map((_, i) => ({
-    id: i,
-    color: `hsl(${Math.random() * 360}, 70%, 60%)`, // Random vibrant color
-    size: `${Math.random() * 8 + 4}px`, // Random size between 4px and 12px
-    delay: `${Math.random() * 0.5}s`, // Staggered delay
-    duration: `${2 + Math.random() * 1.5}s`, // Random duration
-    x: `${Math.random() * 100 - 50}vw`, // Random horizontal spread
-    y: `${Math.random() * 100 - 50}vh`, // Random vertical spread
-    rotation: `${Math.random() * 720}deg`, // Random initial rotation
-  }))
 
   return (
     <div className="fixed inset-0 bg-transparent pointer-events-none z-[100]">

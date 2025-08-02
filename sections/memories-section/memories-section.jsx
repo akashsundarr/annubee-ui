@@ -1,75 +1,121 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import { Plus, Heart, Camera, Leaf, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const BranchingSVG = () => (
-  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 800">
-    {/* Main stem */}
-    <path
-      d="M600 50 Q580 200 620 350 Q640 500 600 650 Q580 750 600 800"
-      stroke="rgb(168 162 158)"
-      strokeWidth="3"
-      fill="none"
-      className="opacity-30"
-    />
+const BranchingSVG = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
 
-    {/* Left branches */}
-    <path
-      d="M600 150 Q500 180 400 200 Q350 220 300 250"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
-    <path
-      d="M600 300 Q480 320 380 340 Q320 360 250 380"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
-    <path
-      d="M600 450 Q520 480 450 500 Q400 520 350 550"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
 
-    {/* Right branches */}
-    <path
-      d="M600 200 Q700 230 800 250 Q850 270 900 300"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
-    <path
-      d="M600 350 Q720 380 820 400 Q880 420 950 450"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
-    <path
-      d="M600 500 Q680 530 750 550 Q800 570 850 600"
-      stroke="rgb(168 162 158)"
-      strokeWidth="2"
-      fill="none"
-      className="opacity-25"
-    />
+  if (!isClient) {
+    return null // Don't render on the server
+  }
 
-    {/* Small twigs */}
-    <path d="M300 250 Q280 240 260 235" stroke="rgb(168 162 158)" strokeWidth="1" fill="none" className="opacity-20" />
-    <path d="M250 380 Q230 370 210 365" stroke="rgb(168 162 158)" strokeWidth="1" fill="none" className="opacity-20" />
-    <path d="M900 300 Q920 290 940 285" stroke="rgb(168 162 158)" strokeWidth="1" fill="none" className="opacity-20" />
-    <path d="M950 450 Q970 440 990 435" stroke="rgb(168 162 158)" strokeWidth="1" fill="none" className="opacity-20" />
-  </svg>
-)
+  return (
+    <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 800">
+      {/* Main stem */}
+      <path
+        d="M600 50 Q580 200 620 350 Q640 500 600 650 Q580 750 600 800"
+        stroke="rgb(168 162 158)"
+        strokeWidth="3"
+        fill="none"
+        className="opacity-30"
+      />
+
+      {/* Left branches */}
+      <path
+        d="M600 150 Q500 180 400 200 Q350 220 300 250"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+      <path
+        d="M600 300 Q480 320 380 340 Q320 360 250 380"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+      <path
+        d="M600 450 Q520 480 450 500 Q400 520 350 550"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+
+      {/* Right branches */}
+      <path
+        d="M600 200 Q700 230 800 250 Q850 270 900 300"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+      <path
+        d="M600 350 Q720 380 820 400 Q880 420 950 450"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+      <path
+        d="M600 500 Q680 530 750 550 Q800 570 850 600"
+        stroke="rgb(168 162 158)"
+        strokeWidth="2"
+        fill="none"
+        className="opacity-25"
+      />
+
+      {/* Small twigs */}
+      <path
+        d="M300 250 Q280 240 260 235"
+        stroke="rgb(168 162 158)"
+        strokeWidth="1"
+        fill="none"
+        className="opacity-20"
+      />
+      <path
+        d="M250 380 Q230 370 210 365"
+        stroke="rgb(168 162 158)"
+        strokeWidth="1"
+        fill="none"
+        className="opacity-20"
+      />
+      <path
+        d="M900 300 Q920 290 940 285"
+        stroke="rgb(168 162 158)"
+        strokeWidth="1"
+        fill="none"
+        className="opacity-20"
+      />
+      <path
+        d="M950 450 Q970 440 990 435"
+        stroke="rgb(168 162 158)"
+        strokeWidth="1"
+        fill="none"
+        className="opacity-20"
+      />
+    </svg>
+  )
+}
 
 const LeafDecorations = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
+
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
+
+  if (!isClient) {
+    return null // Don't render on the server
+  }
+
   const leaves = [
     { x: 280, y: 240, rotation: 45, size: "small", color: "text-green-400" },
     { x: 230, y: 370, rotation: -30, size: "medium", color: "text-emerald-400" },

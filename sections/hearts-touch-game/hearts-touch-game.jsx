@@ -1,10 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import { Heart, Sparkles, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const FloatingSparkles = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
+
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
+
+  if (!isClient) {
+    return null // Don't render on the server
+  }
+
   const sparkles = [
     { x: 10, y: 10, delay: "0s" },
     { x: 90, y: 20, delay: "1s" },

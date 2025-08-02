@@ -1,10 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import { Heart, Gift, Sparkles, Cake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const FloatingBirthdayStickers = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
+
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
+
+  if (!isClient) {
+    return null // Don't render on the server
+  }
+
   const stickers = [
     { icon: Gift, color: "text-pink-400", size: "w-5 h-5", position: "top-10 left-20", delay: "0s" },
     { icon: Cake, color: "text-orange-400", size: "w-6 h-6", position: "top-20 right-32", delay: "1s" },

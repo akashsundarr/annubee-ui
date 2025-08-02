@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 const FloatingStickers = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
+
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
+
+  if (!isClient) {
+    return null // Don't render on the server
+  }
+
   const stickers = [
     { icon: Heart, color: "text-rose-400", size: "w-6 h-6", position: "top-20 left-10", delay: "0s" },
     { icon: Star, color: "text-amber-400", size: "w-5 h-5", position: "top-40 right-20", delay: "1s" },

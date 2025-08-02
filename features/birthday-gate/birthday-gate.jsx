@@ -1,10 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import { Lock, Unlock, Gift, Sparkles, X, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const FloatingSparkles = () => {
+  const [isClient, setIsClient] = useState(false) // New state for client-side rendering
+
+  useEffect(() => {
+    setIsClient(true) // Set to true only on the client after mount
+  }, [])
+
+  if (!isClient) {
+    return null // Don't render on the server
+  }
+
   const sparkles = [
     { x: 10, y: 10, delay: "0s" },
     { x: 90, y: 20, delay: "1s" },
@@ -15,21 +25,24 @@ const FloatingSparkles = () => {
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {sparkles.map((sparkle, index) => (
-        <div
-          key={index}
-          className="absolute opacity-40 animate-pulse"
-          style={{
-            left: `${sparkle.x}%`,
-            top: `${sparkle.y}%`,
-            animationDelay: sparkle.delay,
-            animationDuration: "3s",
-            animationIterationCount: "infinite",
-          }}
-        >
-          <Sparkles className="w-6 h-6 text-pink-300" />
-        </div>
-      ))}
+      {sparkles.map((sparkle, index) => {
+        const Icon = sparkle.icon || Sparkles // Default to Sparkles if not provided
+        return (
+          <div
+            key={index}
+            className={`absolute ${sparkle.position} opacity-40 animate-pulse`}
+            style={{
+              left: `${sparkle.x}%`,
+              top: `${sparkle.y}%`,
+              animationDelay: sparkle.delay,
+              animationDuration: "3s",
+              animationIterationCount: "infinite",
+            }}
+          >
+            <Icon className="w-6 h-6 text-pink-300" />
+          </div>
+        )
+      })}
     </div>
   )
 }
