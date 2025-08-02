@@ -163,7 +163,7 @@ export default function LoveTimeline() {
                           />
                         </div>
                       )}
-                      <p className="text-stone-600 leading-relaxed">{item.description}</p>
+                      <p className="text-stone-600 leading-relaxed hidden md:block">{item.description}</p>
                     </CardContent>
                   </Card>
                 </div>
