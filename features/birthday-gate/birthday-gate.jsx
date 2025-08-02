@@ -108,7 +108,7 @@ export default function BirthdayGate({ onUnlock }) {
 
             <div className="text-center space-y-6">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-100 rounded-full animate-spin-slow">
-                <Gift className="w-10 h-10 text-amber-500" /> {/* Changed to Gift icon */}
+                <Gift className="w-10 h-10 text-amber-500" />
               </div>
               <h3 className="text-3xl font-bold text-stone-800">My Dearest Annu,</h3>
               <p className="text-xl text-stone-600 italic leading-relaxed">
