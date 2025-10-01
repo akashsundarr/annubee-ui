@@ -122,7 +122,7 @@ export default function WhatannuGame() {
             className="w-32 h-32 rounded-full flex items-center justify-center mb-3 shadow-lg transition-transform transform hover:scale-110 overflow-hidden relative" // Added overflow-hidden and relative
           >
             <img
-              src="gundumani.JPG" // <-- Replace with the actual path to your image
+              src="gundumani-giff.gif" // <-- Replace with the actual path to your image
               alt="Gundumani"
               className="w-full h-full object-cover absolute inset-0" // Image fills the button, covers content
             />
