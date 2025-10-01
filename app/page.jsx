@@ -10,6 +10,7 @@ import { GalleryStack } from "@/components/gallery-stack";
 import MusicPlaylist from "@/components/music-playlist";
 import WhatannuGame from "@/sections/what-annu-likes/what-annu-likes";
 import Footer from "@/sections/Footer";
+import PuzzleGame from "@/sections/PuzzleGame";
 
 
 const IMAGES = [
@@ -86,6 +87,7 @@ export default function Page() {
           <MemoriesSection />
           <HeartsTouchGame />
           <WhatannuGame />
+          <PuzzleGame />
           <Footer/>
         </>
       )}
