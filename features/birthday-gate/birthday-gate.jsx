@@ -52,16 +52,17 @@ export default function BirthdayGate({ onUnlock }) {
   const [answer, setAnswer] = useState("")
   const [error, setError] = useState("")
 
-  const correctAnswer = "23-01-2021" // Our first date from timeline.jsx
+ // The single correct answer, in lowercase
+const correctAnswer = "6.49";
 
-  const handleAnswerSubmit = () => {
-    if (answer.trim() === correctAnswer) {
-      setError("")
-      setStep("surprise") // Directly go to surprise modal
-    } else {
-      setError("Oops! That's not quite right. Try again!")
-    }
+const handleAnswerSubmit = () => {
+  // Convert the user's input to lowercase before comparing
+  if (answer.trim().toLowerCase() === correctAnswer) {
+    handleEnterCelebration();
+  } else {
+    setError("Oops! That's not quite right. Try again!");
   }
+};
 
   const handleEnterCelebration = () => {
     setStep("unlocked")
@@ -82,17 +83,15 @@ export default function BirthdayGate({ onUnlock }) {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-rose-100 rounded-full mb-6 border border-rose-200 animate-pulse">
             <Lock className="w-10 h-10 text-rose-500" />
           </div>
-          <h2 className="text-3xl font-bold text-stone-800 mb-4">Unlock Your Birthday Surprise!</h2>
-          <p className="text-lg text-stone-600 mb-6">
-            To reveal your special birthday wish, answer this memory question:
-          </p>
-          <p className="text-xl font-semibold text-stone-700 mb-6">When was our first date? (DD-MM-YYYY)</p>
+          <h2 className="text-3xl font-bold text-stone-800 mb-4">Lock hnee</h2>
+          
+          <p className="text-xl font-semibold text-stone-700 mb-6">There's a special time on the clock that's just for us. Do you know it?</p>
           <div className="flex flex-col gap-4">
             <input
               type="text"
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
-              placeholder="e.g., 23-01-2021"
+              
               className="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-rose-400 text-center text-stone-700"
             />
             {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -107,39 +106,8 @@ export default function BirthdayGate({ onUnlock }) {
         </div>
       )}
 
-      {step === "surprise" && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl transform scale-95 animate-scale-in">
-            <Button
-              onClick={handleEnterCelebration} // Close and proceed
-              variant="ghost"
-              size="sm"
-              className="absolute top-4 right-4 text-stone-400 hover:text-stone-600"
-            >
-              <X className="w-5 h-5" />
-            </Button>
-
-            <div className="text-center space-y-6">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-100 rounded-full animate-spin-slow">
-                <Gift className="w-10 h-10 text-amber-500" />
-              </div>
-              <h3 className="text-3xl font-bold text-stone-800">My Dearest Annu,</h3>
-              <p className="text-xl text-stone-600 italic leading-relaxed">
-                "You are the most beautiful chapter in my life's story. Every day with you is a blessing, and I promise
-                to cherish, love, and support you always. Happy Birthday, my everything!"
-              </p>
-              <p className="text-stone-700 font-medium text-lg">- Forever Yours, Akashee ❤️</p>
-              <Button
-                onClick={handleEnterCelebration}
-                className="bg-stone-800 hover:bg-stone-900 text-white px-8 py-4 text-lg rounded-xl transition-all duration-200 transform hover:scale-105"
-              >
-                <CheckCircle className="w-5 h-5 mr-2" />
-                Enter Main Celebration
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      
+      
 
       <style jsx>{`
         @keyframes fade-in {

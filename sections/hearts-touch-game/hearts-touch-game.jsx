@@ -49,28 +49,32 @@ export default function HeartsTouchGame() {
   const [currentThought, setCurrentThought] = useState(null)
   const [showModal, setShowModal] = useState(false)
 
-  const thoughts = [
-    "Your infectious laugh brightens my darkest days, Annu.",
-    "I love how you always find beauty in the simplest things.",
-    "Your kindness and empathy inspire me every single day.",
-    "I adore your adventurous spirit and how you push me to try new things.",
-    "The way you care for others, especially me, melts my heart.",
-    "I love your unwavering support and belief in me.",
-    "Your intelligence and wit always keep me on my toes.",
-    "I cherish our quiet moments, just being together.",
-    "Your smile is my favorite thing in the world, Annu.",
-    "I love your strength and resilience in facing challenges.",
-    "You make every ordinary moment feel extraordinary.",
-    "I love how you always know how to make me feel better.",
-    "Your passion for life is truly captivating.",
-    "I love the comfort and peace I feel when I'm with you.",
-    "You're my best friend, my confidante, and my greatest love.",
-    "I love your unique perspective on the world.",
-    "The way you light up a room just by being yourself.",
-    "I love your honesty and how you always speak your mind.",
-    "You've taught me so much about love and life.",
-    "I love you more than words can say, my Annu.",
-  ]
+ const thoughts = [
+  // 1
+  "njnn down ayit irkumbal oke ennod smsarich enna okee akummm.. ",
+  // 2
+  "enna oke ahnelum njn kazhinjiteee annu nu ollee aa 1st priority ",
+  // 3
+  "make me better than i was yesterday.",
+  // 4
+  "oru vazhak indaya enta side il hn thett engilum ennod njn chytha thett inee enood vazhak idathee smooth ayit enik mansilakii therum ( illee njn pinangii pokueee)",
+  // 5
+  "pinne enik little things inu valya value indennu padipichuu",
+  // 6
+  "pinna njn onnum parayathee ellam arinjondd enik vendii chyyunnathu konduu",
+  // 7
+  "piinne kore kastapettt enne call akum . kandaa veedinta porath mosquito de kadi um kond porath ninnu okkee..",
+  // 8
+  "Sathyam paranjaal, nthoo angg istavaaaa that's it",
+  // 9
+  "pinna enik oral induu enna nokkan ennu ulla oru ithu kitti..",
+  // 10
+  "youre tooo crazyy annu, like too childishh and mature at the same time..",
+  // 11
+  "pinne nmml oro vazhak undavumbol njn pinangi poyalum nee vannu solve akum if avde nee oru thett chythit illel polum."
+];
+
+
 
   const heartPositions = [
     { x: 15, y: 20 },
@@ -117,12 +121,12 @@ export default function HeartsTouchGame() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-stone-200 px-4 py-2 rounded-full mb-6">
             <Heart className="w-5 h-5 text-rose-600 fill-current" />
-            <span className="text-sm font-medium text-stone-700">A Heart's Touch</span>
+            {/* <span className="text-sm font-medium text-stone-700">A Heart's Touch</span> */}
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4">Why I Love You, Annu</h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-8">
-            Every beat of my heart holds a reason. Click on a heart to discover a special thought about you.
+            ellam nekkikooo.. cringe cringeeeeeee!!!!
           </p>
         </div>
 
@@ -171,9 +175,9 @@ export default function HeartsTouchGame() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full">
                 <Heart className="w-8 h-8 text-rose-500 fill-current" />
               </div>
-              <h3 className="text-2xl font-bold text-stone-800">A Special Thought For You</h3>
+              {/* <h3 className="text-2xl font-bold text-stone-800">A Special Thought For You</h3> */}
               <p className="text-lg text-stone-600 italic leading-relaxed">"{currentThought}"</p>
-              <p className="text-stone-700 font-medium">- Forever Yours</p>
+              {/* <p className="text-stone-700 font-medium">- Forever Nandu</p> */}
             </div>
           </div>
         </div>

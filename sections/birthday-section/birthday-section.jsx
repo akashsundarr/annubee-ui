@@ -97,9 +97,7 @@ export default function BirthdaySection() {
               </h2>
 
               <p className="text-lg text-stone-600 leading-relaxed max-w-lg">
-                Today marks another beautiful year of your amazing journey. Twenty years of spreading joy, creating
-                memories, and being the incredible person you are. Here's to celebrating you and all the wonderful
-                moments yet to come.
+                Another shining chapter in your journey... In the twenty years that have passed, you gave happiness, gave unforgettable memories like a dream.
               </p>
             </div>
 
@@ -114,30 +112,29 @@ export default function BirthdaySection() {
                 {isWished ? (
                   <>
                     <Heart className="w-5 h-5 mr-2 fill-current" />
-                    Wished! 💝
+                    Muaaaa 😙
                   </>
                 ) : (
                   <>
                     <Gift className="w-5 h-5 mr-2" />
-                    Send Birthday Wish
+                    Touch here, Annu 💝
                   </>
                 )}
               </Button>
 
-              <Button
+              {/* <Button
                 variant="outline"
                 className="px-8 py-4 text-lg font-medium rounded-2xl border-stone-300 text-stone-700 hover:bg-stone-200 transition-all duration-300 bg-transparent"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
                 View Memories
-              </Button>
+              </Button> */}
             </div>
 
             {isWished && (
               <div className="bg-stone-200 p-6 rounded-2xl border border-stone-300 animate-fade-in">
                 <p className="text-stone-700 italic">
-                  "Your birthday wish has been sent with love! 🎉 May this new year bring you endless happiness, amazing
-                  adventures, and all your dreams coming true. You deserve all the beautiful things life has to offer!"
+                  "Happy bday Annamma! 🎉 May this day be filled with lots of happiness. I sincerely wish that all your dreams come true in the coming year."
                 </p>
                 <p className="text-stone-600 text-sm mt-2 font-medium">- With love, from your timeline ❤️</p>
               </div>
@@ -160,7 +157,7 @@ export default function BirthdaySection() {
 
                 <div className="space-y-2">
                   <h3 className="text-3xl font-bold text-stone-800">20 Years</h3>
-                  <p className="text-stone-600">of amazing memories</p>
+                  <p className="text-stone-600">Nthalleyy..</p>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 pt-4">
