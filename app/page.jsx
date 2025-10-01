@@ -76,8 +76,7 @@ export default function Page() {
                   Annu's Gallery
                 </h1>
                 <p className="text-muted-foreground mt-2">
-                  A collection of my favorite moments with you. Tap each photo
-                  to see the next.
+                  kunj annu to valya annuu!!!
                 </p>
               </header>
 
