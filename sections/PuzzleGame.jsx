@@ -58,11 +58,8 @@ function PuzzleGame() {
           <span className="text-sm font-medium text-stone-700">A Little Game</span>
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4">
-          Our First Onam Puzzle
+          Solve the Puzzle!
         </h2>
-        <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-12">
-          Piece together one of our favorite memories. Click and drag the pieces to solve the puzzle!
-        </p>
 
         <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-stone-200 max-w-xl mx-auto touch-none">
           <JigsawPuzzle
