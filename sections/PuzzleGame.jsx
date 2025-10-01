@@ -64,7 +64,7 @@ function PuzzleGame() {
           Piece together one of our favorite memories. Click and drag the pieces to solve the puzzle!
         </p>
 
-        <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-stone-200 max-w-xl mx-auto">
+        <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-stone-200 max-w-xl mx-auto touch-none">
           <JigsawPuzzle
             imageSrc="/puzzle.jpg"
             rows={3}
