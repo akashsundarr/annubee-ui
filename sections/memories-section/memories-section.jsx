@@ -189,107 +189,79 @@ const LeafDecorations = () => {
 };
 
 export default function MemoriesSection() {
-  const [memories, setMemories] = useState([
-    // ... (your memories data is unchanged)
-    {
-      id: "1",
-      image: "/combo_01.jpg",
-      title: "+2 Classroom",
-      date: "March 2023",
-      description: "nthoo avl note ezhuthanu njn disturb akanu..",
-    },
-    {
-      id: "2",
-      image: "/combo_02.jpg",
-      title: "Last Exam Last Day of School",
-      date: "March 2023",
-      description: "School adacha divasam",
-    },
-    {
-      id: "3",
-      image: "/combo_03.jpg",
-      title: "18th Bday",
-      date: "October 2023",
-      description: "1st bday after the relationship",
-    },
-    {
-      id: "4",
-      image: "/mandhi_date.jpg",
-      title: "Mandhi Date",
-      date: "December 2023",
-      description: "Yummyy Yummyy..",
-    },
-    {
-      id: "5",
-      image: "/combo_04.jpg",
-      title: "Boat Yathra",
-      date: "February 2024",
-      description: "angnee okke parayamm... ehehe",
-    },
-    {
-      id: "6",
-      image: "/combo_05.jpg",
-      title: "Temple Date",
-      date: "April 2024",
-      description: "what a day adipoli.. hehehe",
-    },
-    {
-      id: "7",
-      image: "/combo_06.jpg",
-      title: "Mall Date",
-      date: "June 2024",
-      description: "karangann poii athree oll",
-    },
-    {
-      id: "8",
-      image: "/combo_07.jpg",
-      title: "Bus Yathra",
-      date: "August 2024",
-      description: "chumma irunnu sugham ayit pokaaa",
-    },
-    {
-      id: "9",
-      image: "/combo_08.jpg",
-      title: "1st Onam",
-      date: "September 2024",
-      description: "Jillam pada pada jillam",
-    },
-    {
-      id: "10",
-      image: "/combo_09.jpg",
-      title: "Movie Date",
-      date: "October 2024",
-      description: "3d glasss okke vech irikane nokikee nthalleyy.",
-    },
-    {
-      id: "11",
-      image: "/combo_10.jpg",
-      title: "Loosuu",
-      date: "February 2025",
-      description: "verthee showww hnnn..",
-    },
-    {
-      id: "12",
-      image: "/combo_11.jpg",
-      title: "whoopeee",
-      date: "March 2025",
-      description: "Mm Mmmmmmm Mmmmm",
-    },
-    {
-      id: "13",
-      image: "/combo_12.jpg",
-      title: "Chai Date",
-      date: "June 2025",
-      description: "Nthaa taste annu ollondaaa chai okke taste",
-    },
-     {
-      id: "14",
-      image: "/combo_13.jpg",
-      title: "Camera nokkee .",
-      date: "August 2025",
-      description: "kazhiv ollavala dhey knda camera oke kond vannekanu , adutha photo shoot inu edukkamm..",
-    },
-  ]);
+const [memories, setMemories] = useState([
+  // ... (other items are fine)
+  {
+    id: "5",
+    image: "/combo_04.JPG", // Corrected from .jpg to .JPG
+    title: "Boat Yathra",
+    date: "February 2024",
+    description: "angnee okke parayamm... ehehe",
+  },
+  {
+    id: "6",
+    image: "/combo_05.JPG", // Corrected from .jpg to .JPG
+    title: "Temple Date",
+    date: "April 2024",
+    description: "what a day adipoli.. hehehe",
+  },
+  {
+    id: "7",
+    image: "/combo_06.JPG", // Corrected from .jpg to .JPG
+    title: "Mall Date",
+    date: "June 2024",
+    description: "karangann poii athree oll",
+  },
+  {
+    id: "8",
+    image: "/combo_07.JPG", // Corrected from .jpg to .JPG
+    title: "Bus Yathra",
+    date: "August 2024",
+    description: "chumma irunnu sugham ayit pokaaa",
+  },
+  {
+    id: "9",
+    image: "/combo_08.JPG", // Corrected from .jpg to .JPG
+    title: "1st Onam",
+    date: "September 2024",
+    description: "Jillam pada pada jillam",
+  },
+  {
+    id: "10",
+    image: "/combo_09.JPG", // Corrected from .jpg to .JPG
+    title: "Movie Date",
+    date: "October 2024",
+    description: "3d glasss okke vech irikane nokikee nthalleyy.",
+  },
+  {
+    id: "11",
+    image: "/combo_10.JPG", // Corrected from .jpg to .JPG
+    title: "Loosuu",
+    date: "February 2025",
+    description: "verthee showww hnnn..",
+  },
+  {
+    id: "12",
+    image: "/combo_11.JPG", // Corrected from .jpg to .JPG
+    title: "whoopeee",
+    date: "March 2025",
+    description: "Mm Mmmmmmm Mmmmm",
+  },
+  {
+    id: "13",
+    image: "/combo_12.jpg", // This one was already correct
+    title: "Chai Date",
+    date: "June 2025",
+    description: "Nthaa taste annu ollondaaa chai okke taste",
+  },
+  {
+    id: "14",
+    image: "/combo_13.JPG", // Corrected from .jpg to .JPG
+    title: "Camera nokkee .",
+    date: "August 2025",
+    description: "kazhiv ollavala dhey knda camera oke kond vannekanu , adutha photo shoot inu edukkamm..",
+  },
+]);
   const [selectedMemory, setSelectedMemory] = useState(null);
 
   // 2. Use the hook to get the screen state

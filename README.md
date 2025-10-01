@@ -1,37 +1,8 @@
-# annu-ui
-
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/akash-sundars-projects/v0-annu-ui)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/PiAb91xJ31h)
-
-## Overview
-
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/akash-sundars-projects/v0-annu-ui](https://vercel.com/akash-sundars-projects/v0-annu-ui)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/PiAb91xJ31h](https://v0.dev/chat/projects/PiAb91xJ31h)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
 
 ```
 annubee-ui
 ├─ app
+│  ├─ annu-logo.png
 │  ├─ globals.css
 │  ├─ layout.tsx
 │  └─ page.jsx
@@ -115,6 +86,9 @@ annubee-ui
 ├─ pnpm-lock.yaml
 ├─ postcss.config.mjs
 ├─ public
+│  ├─ all-i.m4a
+│  ├─ alli-i.mp3
+│  ├─ annu-logo.png
 │  ├─ annu_baby0.jpg
 │  ├─ annu_baby02.jpg
 │  ├─ annu_baby03.jpg
@@ -138,22 +112,44 @@ annubee-ui
 │  ├─ annu_baby21.jpg
 │  ├─ annu_baby22.jpg
 │  ├─ annu_baby23.jpg
+│  ├─ bday_song.m4a
+│  ├─ combo_01.jpg
+│  ├─ combo_02.jpg
+│  ├─ combo_03.jpg
+│  ├─ combo_04.JPG
+│  ├─ combo_05.JPG
+│  ├─ combo_06.JPG
+│  ├─ combo_07.JPG
+│  ├─ combo_08.JPG
+│  ├─ combo_09.JPG
+│  ├─ combo_10.JPG
+│  ├─ combo_11.JPG
+│  ├─ combo_12.jpg
+│  ├─ combo_13.JPG
+│  ├─ gundumani-giff.gif
+│  ├─ gundumani.JPG
+│  ├─ main_song.mp3
+│  ├─ mandhi_date.jpg
 │  ├─ mudhal_nee.mp3
+│  ├─ no_sound.mp3
 │  ├─ placeholder-logo.png
 │  ├─ placeholder-logo.svg
 │  ├─ placeholder-user.jpg
-│  ├─ placeholder.jpg
-│  └─ placeholder.svg
+│  ├─ placeholder.svg
+│  └─ stacked-gallery-placeholder.jpg
 ├─ README.md
 ├─ sections
 │  ├─ birthday-section
 │  │  └─ birthday-section.jsx
+│  ├─ Footer.jsx
 │  ├─ hearts-touch-game
 │  │  └─ hearts-touch-game.jsx
 │  ├─ love-timeline
 │  │  └─ love-timeline.jsx
-│  └─ memories-section
-│     └─ memories-section.jsx
+│  ├─ memories-section
+│  │  └─ memories-section.jsx
+│  └─ what-annu-likes
+│     └─ what-annu-likes.jsx
 ├─ styles
 │  └─ globals.css
 ├─ tsconfig.json
