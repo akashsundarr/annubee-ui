@@ -66,7 +66,7 @@ function PuzzleGame() {
 
         <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-stone-200 max-w-xl mx-auto">
           <JigsawPuzzle
-            imageSrc="/puzzle.JPG"
+            imageSrc="/puzzle.jpg"
             rows={3}
             columns={3}
             onSolved={handleSolved}
